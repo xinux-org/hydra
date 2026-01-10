@@ -8,7 +8,7 @@ on:
 jobs:
   test:
     name: "Test flake"
-    runs-on: [self-hosted, Xinux]
+    runs-on: self-hosted
 
     steps:
       - name: Check out the repository
