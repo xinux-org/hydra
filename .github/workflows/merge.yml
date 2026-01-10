@@ -1,0 +1,31 @@
+name: Test CI
+
+on: [pull_request]
+
+jobs:
+  test:
+    name: "Test flake"
+    runs-on: self-hosted
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Check up flake configuration
+        run: nix flake check --show-trace # --all-systems
+
+      - name: Build all packages
+        run: nix build
+
+  update-merge:
+    name: "Merge Update PRs"
+    needs: [test]
+    runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request.user.login == 'xinuxmgrbot' && github.event_name == 'pull_request'}}
+
+    steps:
+      - name: Enable auto-merge for Update PRs
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
