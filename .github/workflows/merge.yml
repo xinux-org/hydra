@@ -1,15 +1,18 @@
 name: Test CI
 
-on: [pull_request]
+on:
+  - push
+  - pull_request
+  - workflow_dispatch
 
 jobs:
   test:
     name: "Test flake"
-    runs-on: self-hosted
+    runs-on: [self-hosted, Xinux]
 
     steps:
       - name: Check out the repository
-        uses: actions/checkout@v4
+        uses: actions/  checkout@v4
 
       - name: Check up flake configuration
         run: nix flake check --show-trace # --all-systems
