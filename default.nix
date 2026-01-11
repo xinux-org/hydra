@@ -14,9 +14,11 @@ in
 
     nativeBuildInputs =
       (with pkgs; [
+        rustdesk
         zed-editor
       ])
       ++ (with pkgs-unstable; [
+        rustdesk
         zed-editor
       ]);
 
