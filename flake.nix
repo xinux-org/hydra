@@ -2,8 +2,14 @@
   description = "Collection of packages from various channels & flakes for hydra farming";
 
   inputs = {
+    # Stable Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
+
+    # Unstable Nixpkgs
     nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+
+    # The flake-parts library
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
   outputs = {flake-parts, ...} @ inputs:
