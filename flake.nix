@@ -12,7 +12,11 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = {flake-parts, ...} @ inputs:
+  outputs = {
+    self,
+    flake-parts,
+    ...
+  } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} ({...}: {
       systems = [
         "x86_64-linux"
@@ -20,7 +24,18 @@
         "x86_64-darwin"
         "aarch64-darwin"
       ];
-      perSystem = {pkgs, ...}: {
+      perSystem = {
+        pkgs,
+        system,
+        ...
+      }: {
+        # Overlay for pkgs
+        _module.args.pkgs = import self.inputs.nixpkgs {
+          inherit system;
+          overlays = [];
+          config.allowUnfree = true;
+        };
+
         # Nix script formatter
         formatter = pkgs.alejandra;
 
