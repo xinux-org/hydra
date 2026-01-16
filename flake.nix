@@ -10,6 +10,32 @@
 
     # The flake-parts library
     flake-parts.url = "github:hercules-ci/flake-parts";
+    
+    # Xinux
+    xeonitte = {
+      url = "github:xinux-org/xeonitte";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    nix-software-center = {
+      url = "github:xinux-org/software-center";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    xinux-module-manager = {
+      url = "github:xinux-org/module-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixos-conf-editor = {
+      url = "github:xinux-org/conf-editor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    e-imzo-manager = {
+      url = "github:xinux-org/e-imzo-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
