@@ -492,11 +492,11 @@
         "xinux-lib": "xinux-lib_2"
       },
       "locked": {
-        "lastModified": 1767870274,
-        "narHash": "sha256-utMbmbNmO+GAQB2AUOmBuhaNBPWVXUovh6S/YYhFE/Y=",
+        "lastModified": 1769514783,
+        "narHash": "sha256-1Snu+TehsSC7FolD8oWQ6djoy3m9XCe5Di5Zjz8JTkU=",
         "owner": "xinux-org",
         "repo": "xeonitte",
-        "rev": "05184f42bc5d419d3fb1873d4f426ef140cf908b",
+        "rev": "e1588893f61e5ad52010f74cfe6e0fd8025ca16b",
         "type": "github"
       },
       "original": {
