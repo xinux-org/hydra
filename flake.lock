@@ -39,11 +39,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1770357068,
-        "narHash": "sha256-l/jn+NauC3yhQy0VSsXtgv8k6sHU7ch7Vmm7mxrWTjU=",
+        "lastModified": 1770374379,
+        "narHash": "sha256-shILY4ILw65Fjmg1jT/J+0WHYfl2JyCfj9slH6YpLME=",
         "owner": "xinux-org",
         "repo": "e-imzo-manager",
-        "rev": "4a536bc8f1b846d13767e2e10571bf731e20146f",
+        "rev": "e6aab3dc052e85a70f5eda55edba738cfb9795ce",
         "type": "github"
       },
       "original": {
@@ -582,11 +582,11 @@
         "xinux-lib": "xinux-lib_3"
       },
       "locked": {
-        "lastModified": 1764336107,
-        "narHash": "sha256-X6X1jeVTrhGatllrsFuEA5vISz/jGlBTfp6dzUllUkM=",
+        "lastModified": 1770373589,
+        "narHash": "sha256-YUdwrD0NdGY27eM1sitqOcLf6V7aD6QmKpMrtyGsdWE=",
         "owner": "xinux-org",
         "repo": "module-manager",
-        "rev": "b30abec5eebd29abc6cd007e5b9027d2d64e44ca",
+        "rev": "490840aa92178ecc3a8ba3946d6fc2e4c67ff35b",
         "type": "github"
       },
       "original": {
