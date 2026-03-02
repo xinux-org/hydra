@@ -20,7 +20,7 @@
     inputs.xinux-lib.mkFlake {
       inherit inputs;
       src = ./.;
-      
+
       # Extra nix flags to set
       outputs-builder = channels: {
         formatter = channels.nixpkgs.nixfmt-tree;
@@ -29,7 +29,6 @@
       # Globally applied nixpkgs settings
       channels-config = {
         allowUnfree = true;
-        
       };
     };
 }
