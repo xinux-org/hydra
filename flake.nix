@@ -63,7 +63,7 @@
         };
 
         # Nix script formatter
-        formatter = pkgs.alejandra;
+        formatter = pkgs.nixfmt-tree;
 
         # Development environment
         devShells.default = import ./shell.nix {inherit pkgs;};

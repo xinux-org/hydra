@@ -12,7 +12,8 @@
 pkgs.mkShell {
   packages = with pkgs; [
     nixd
-    alejandra
+    nixfmt
+    nixfmt-tree
     statix
     deadnix
   ];
